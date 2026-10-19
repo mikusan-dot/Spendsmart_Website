@@ -44,9 +44,8 @@ python -m http.server 8000
 ## Customization
 
 - Update Play Store URL in `index.html` and `privacy.html`
-- Replace `support@spendsmart.app` with your contact email
+- Contact email is `spendsmart.app@gmail.com` (footer + privacy page). Create this Gmail account and monitor it — the privacy policy promises email-based deletion requests.
 - Modify colors in `src/styles.css` (`:root` variables)
-- Add your actual audit report link in security section
 
 ## Requirements Met
 
