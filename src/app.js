@@ -48,61 +48,28 @@
   if (menu) menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
 
-  /* ---------- Hero donut (sample data, interactive filter) ---------- */
-  var donut = $('#donut');
-  if (donut) {
-    var data = [
-      { name: 'Food', value: 940, color: '#F5A524' },
-      { name: 'Bills', value: 670, color: '#4C8DF6' },
-      { name: 'Transport', value: 496, color: '#8B6CF0' },
-      { name: 'Fun', value: 374, color: '#E8576F' }
-    ];
-    var total = data.reduce(function (s, d) { return s + d.value; }, 0);
-    var R = 42, C = 2 * Math.PI * R, GAP = 3;
-    var NS = 'http://www.w3.org/2000/svg';
-    var valueEl = $('#donutValue');
-    var labelEl = $('#donutLabel');
-    var chips = $('#chips');
-    var money = function (n) { return '$' + n.toLocaleString('en-US'); };
-    var segs = [];
-    var offset = 0;
-
-    data.forEach(function (d) {
-      var len = (d.value / total) * C;
-      var c = document.createElementNS(NS, 'circle');
-      c.setAttribute('class', 'donut__seg');
-      c.setAttribute('cx', 60); c.setAttribute('cy', 60); c.setAttribute('r', R);
-      c.setAttribute('stroke', d.color);
-      c.setAttribute('stroke-dashoffset', -offset);
-      c.setAttribute('stroke-dasharray', reduce ? (len - GAP) + ' ' + C : '0 ' + C);
-      c._len = len - GAP;
-      donut.appendChild(c);
-      segs.push(c);
-      offset += len;
+  /* ---------- Screenshot gallery arrows ---------- */
+  var track = $('#galTrack');
+  var prev = $('#galPrev');
+  var next = $('#galNext');
+  if (track && prev && next) {
+    var step = function () {
+      var shot = $('.shot', track);
+      return shot ? shot.getBoundingClientRect().width + 28 : 280;
+    };
+    var update = function () {
+      prev.disabled = track.scrollLeft < 8;
+      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 8;
+    };
+    prev.addEventListener('click', function () { track.scrollBy({ left: -step() * 2, behavior: reduce ? 'auto' : 'smooth' }); });
+    next.addEventListener('click', function () { track.scrollBy({ left: step() * 2, behavior: reduce ? 'auto' : 'smooth' }); });
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    track.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); next.click(); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); prev.click(); }
     });
-
-    if (!reduce) {
-      requestAnimationFrame(function () {
-        setTimeout(function () {
-          segs.forEach(function (c) { c.setAttribute('stroke-dasharray', c._len + ' ' + C); });
-        }, 250);
-      });
-    }
-
-    function select(i) {
-      segs.forEach(function (c, j) { c.classList.toggle('dim', i !== -1 && i !== j); });
-      $$('.chip', chips).forEach(function (b, j) { b.setAttribute('aria-pressed', String(i === j)); });
-      if (i === -1) { valueEl.textContent = money(total); labelEl.textContent = 'Total spent'; }
-      else { valueEl.textContent = money(data[i].value); labelEl.textContent = data[i].name; }
-    }
-    data.forEach(function (d, i) {
-      var b = document.createElement('button');
-      b.type = 'button'; b.className = 'chip'; b.setAttribute('aria-pressed', 'false');
-      b.innerHTML = '<i style="--c:' + d.color + '"></i>' + d.name;
-      b.addEventListener('click', function () { select(b.getAttribute('aria-pressed') === 'true' ? -1 : i); });
-      chips.appendChild(b);
-    });
-    valueEl.textContent = money(total);
+    update();
   }
 
   /* ---------- Reveal feature visuals once when scrolled into view ---------- */

@@ -10,7 +10,18 @@
   <meta property="og:title" content="SpendSmart - Smart Expense Tracking">
   <meta property="og:description" content="Simple expense tracking with powerful insights. Private by design, encrypted end to end.">
   <meta property="og:url" content="https://mikusan-dot.github.io/Spendsmart_Website/">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://mikusan-dot.github.io/Spendsmart_Website/public/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SpendSmart expense tracking app on two phones">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SpendSmart - Smart Expense Tracking">
+  <meta name="twitter:description" content="Simple expense tracking with powerful insights. Private by design, encrypted end to end.">
+  <meta name="twitter:image" content="https://mikusan-dot.github.io/Spendsmart_Website/public/og-image.png">
+  <link rel="canonical" href="https://mikusan-dot.github.io/Spendsmart_Website/">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SpendSmart","applicationCategory":"FinanceApplication","operatingSystem":"Android 7.0+","softwareVersion":"2.1.2","description":"Simple expense tracking with budgets, insights and end-to-end encrypted sync.","url":"https://mikusan-dot.github.io/Spendsmart_Website/","downloadUrl":"https://play.google.com/store/apps/details?id=com.spendsmart.app"}
+  </script>
   <link rel="icon" type="image/svg+xml" href="public/favicon.svg">
   <link rel="icon" href="public/favicon.ico" sizes="any">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,6 +50,8 @@
       <symbol id="i-android" viewBox="0 0 24 24"><path d="M7 9h10v8a1.5 1.5 0 0 1-1.5 1.5H15V21a1 1 0 0 1-2 0v-2.5h-2V21a1 1 0 0 1-2 0v-2.5h-.5A1.5 1.5 0 0 1 7 17V9Zm-3.5 0a1 1 0 0 1 2 0v5a1 1 0 0 1-2 0V9Zm15 0a1 1 0 0 1 2 0v5a1 1 0 0 1-2 0V9ZM8 8a4 4 0 0 1 8 0H8Z" fill="currentColor"/></symbol>
       <symbol id="i-play" viewBox="0 0 24 24"><path d="M5 3.5v17a1 1 0 0 0 1.5.9l14-8.5a1 1 0 0 0 0-1.8l-14-8.5A1 1 0 0 0 5 3.5Z" fill="currentColor"/></symbol>
       <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 2.9.8.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7 3.6 3.6 0 0 1 .1-2.7s.8-.3 2.8 1a9.6 9.6 0 0 1 5 0c2-1.3 2.800-1 2.800-1 .6 1.400.2 2.400.1 2.700a3.900 3.900 0 0 1 1 2.700c0 3.900-2.400 4.700-4.600 5 .4.300.7.900.7 1.800v2.700c0 .3.200.6.700.5A10 10 0 0 0 12 2Z" fill="currentColor"/></symbol>
+      <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
       <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
       <symbol id="i-x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></symbol>
       <symbol id="logo" viewBox="0 0 32 32"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M9 21.500c1.200 1.500 3.200 2.500 5.500 2.500 3 0 5-1.400 5-3.600 0-5-9.500-2.400-9.500-7.200C10 10.700 12 9 15 9c2 0 3.700.7 4.900 2" fill="none" stroke="#fff" stroke-width="2.600" stroke-linecap="round"/><path d="M16 6.500v19" stroke="#fff" stroke-width="2.600" stroke-linecap="round"/></symbol>
@@ -53,9 +66,10 @@
       </a>
       <nav class="nav__links" id="menu" aria-label="Main">
         <a href="#features">Features</a>
+        <a href="#screens">Screenshots</a>
         <a href="#security">Security</a>
         <a href="#download">Download</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="#faq">FAQ</a>
       </nav>
       <div class="nav__actions">
         <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch to dark mode">
@@ -89,35 +103,15 @@
           </ul>
         </div>
 
-        <!-- Phone: live, interactive preview with sample data -->
-        <div class="stage" aria-label="SpendSmart app preview with sample data">
-          <div class="toast" role="note">
-            <span class="toast__dot"></span>
-            <div><strong>Groceries at 82%</strong><small>You're close to this month's limit</small></div>
+        <!-- Phones: real app screens -->
+        <div class="stage">
+          <div class="phone phone--back" aria-hidden="true">
+            <span class="phone__cam"></span>
+            <div class="screen"><img src="public/screens/budget.webp" alt="" width="540" height="1148"></div>
           </div>
-          <div class="phone">
-            <div class="phone__notch" aria-hidden="true"></div>
-            <div class="screen">
-              <div class="screen__top">
-                <span>October</span>
-                <span class="screen__tag">Sample data</span>
-              </div>
-              <div class="donut">
-                <svg viewBox="0 0 120 120" id="donut" role="img" aria-label="Spending by category">
-                  <circle class="donut__track" cx="60" cy="60" r="42"/>
-                </svg>
-                <div class="donut__mid">
-                  <small id="donutLabel">Total spent</small>
-                  <strong id="donutValue">$2,480</strong>
-                </div>
-              </div>
-              <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
-              <ul class="tx">
-                <li><span class="tx__ic" style="--c:#F5A524">F</span><div><b>Fresh Market</b><small>Food</small></div><em>-$64.20</em></li>
-                <li><span class="tx__ic" style="--c:#4C8DF6">B</span><div><b>Internet bill</b><small>Bills</small></div><em>-$39.00</em></li>
-                <li><span class="tx__ic" style="--c:#8B6CF0">T</span><div><b>Metro card</b><small>Transport</small></div><em>-$20.00</em></li>
-              </ul>
-            </div>
+          <div class="phone phone--front">
+            <span class="phone__cam"></span>
+            <div class="screen"><img src="public/screens/home.webp" alt="SpendSmart home screen with this month's balance, income and spending, and quick buttons to add an expense or income" width="540" height="1148" fetchpriority="high"></div>
           </div>
         </div>
       </div>
@@ -214,6 +208,92 @@
       </div>
     </section>
 
+    <!-- SCREENSHOTS -->
+    <section class="section section--tint" id="screens">
+      <div class="wrap section__row">
+        <div class="section__head">
+          <h2>See it on your phone</h2>
+          <p>Real screens from the app, shown with no entries yet. Swipe or use the arrows.</p>
+        </div>
+        <div class="gallery__ctrl">
+          <button class="icon-btn" id="galPrev" type="button" aria-label="Previous screenshots"><svg aria-hidden="true"><use href="#i-arrow-l"/></svg></button>
+          <button class="icon-btn" id="galNext" type="button" aria-label="Next screenshots"><svg aria-hidden="true"><use href="#i-arrow-r"/></svg></button>
+        </div>
+      </div>
+      <div class="gallery__track" id="galTrack" tabindex="0" role="region" aria-label="App screenshots">
+        <figure class="shot">
+          <div class="phone phone--s">
+            <span class="phone__cam"></span>
+            <div class="screen"><img src="public/screens/home.webp" alt="Home screen showing the monthly balance card and a Recent activity list" width="540" height="1148" loading="lazy"></div>
+          </div>
+          <figcaption><h3>Home</h3><p>This month's balance, income and spending, with quick buttons to add an expense or income.</p></figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="phone phone--s">
+            <span class="phone__cam"></span>
+            <div class="screen"><img src="public/screens/activity.webp" alt="Activity screen with a search bar and All, This month, Expenses and Income filters" width="540" height="1148" loading="lazy"></div>
+          </div>
+          <figcaption><h3>Activity</h3><p>Search every entry by name, category or note, and filter by expenses or income.</p></figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="phone phone--s">
+            <span class="phone__cam"></span>
+            <div class="screen"><img src="public/screens/budget.webp" alt="Budget screen listing Food, Travel, Shopping, Bills, House Rent and Other with a Set limit button each" width="540" height="1148" loading="lazy"></div>
+          </div>
+          <figcaption><h3>Budgets</h3><p>Give each category a monthly limit and see how many days are left in the month.</p></figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="phone phone--s">
+            <span class="phone__cam"></span>
+            <div class="screen"><img src="public/screens/insights.webp" alt="Insights screen with spending by category, a six-month income versus spending chart and a 30-day view" width="540" height="1148" loading="lazy"></div>
+          </div>
+          <figcaption><h3>Insights</h3><p>Spending by category, income against spending over six months, and daily spending.</p></figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="phone phone--s">
+            <span class="phone__cam"></span>
+            <div class="screen"><img src="public/screens/add.webp" alt="New transaction sheet with an amount field, a what-for field and category buttons" width="540" height="1148" loading="lazy"></div>
+          </div>
+          <figcaption><h3>Quick add</h3><p>Log an amount, what it was for and a category in about five seconds.</p></figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="phone phone--s">
+            <span class="phone__cam"></span>
+            <div class="screen"><img src="public/screens/profile.webp" alt="Profile screen with level, streak and badge counters and preference switches" width="540" height="1148" loading="lazy"></div>
+          </div>
+          <figcaption><h3>Profile</h3><p>Levels, badges and streaks, plus sound, haptic and daily reminder settings.</p></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="section__head">
+          <h2>How your data stays yours</h2>
+          <p>No name, email or phone number needed. One key that only you hold.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Your device makes a key</h3>
+            <p>SpendSmart generates a unique 100-bit sync key on your device, using cryptographically secure random values.</p>
+          </li>
+          <li>
+            <h3>Your data is encrypted</h3>
+            <p>Everything is encrypted in transit (TLS 1.2+) and at rest, on Google Firebase infrastructure.</p>
+          </li>
+          <li>
+            <h3>Only your key opens it</h3>
+            <p>Security rules let only your sync key reach your data. Nobody can list or browse other people's entries.</p>
+          </li>
+          <li>
+            <h3>Keep the key safe</h3>
+            <p>Your key is how your data follows you across devices. If it's lost, the data can't be recovered, by design.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
     <!-- SECURITY -->
     <section class="security" id="security">
       <div class="wrap security__grid">
@@ -273,6 +353,15 @@
               <div><dt>Size</dt><dd>4.4 MB</dd></div>
               <div><dt>Requires</dt><dd>Android 7.0+</dd></div>
             </dl>
+            <div class="apk">
+              <h3>Installing the APK</h3>
+              <ol>
+                <li>Download the file on your phone.</li>
+                <li>Open it. If Android asks, allow your browser or Files app to install apps from this source.</li>
+                <li>Tap Install, then open SpendSmart.</li>
+              </ol>
+              <p>Want updates handled for you? Use Google Play instead.</p>
+            </div>
           </div>
 
           <div class="verify">
@@ -288,6 +377,46 @@
         </div>
       </div>
     </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap faq">
+        <div class="faq__head">
+          <h2>Questions, answered</h2>
+          <p>Something else on your mind? Email <a href="mailto:spendsmartapp.help@gmail.com">spendsmartapp.help@gmail.com</a>.</p>
+        </div>
+        <div class="faq__list">
+          <details>
+            <summary>Do I need to create an account?</summary>
+            <p>No name, email or phone number is needed. SpendSmart generates a sync key on your device, and that key is how your data is found and protected.</p>
+          </details>
+          <details>
+            <summary>What happens if I lose my sync key?</summary>
+            <p>Your data can't be recovered. That's by design: we can't read it or reset it for you, so keep your key somewhere safe.</p>
+          </details>
+          <details>
+            <summary>Can SpendSmart read my finances?</summary>
+            <p>No. Your data is encrypted in transit and at rest, and access is tied to a sync key only you have. We don't sell, rent or share your data with third parties. Google Firebase processes it only to run the service.</p>
+          </details>
+          <details>
+            <summary>Which devices does it run on?</summary>
+            <p>SpendSmart is currently available for Android 7.0 and newer, from Google Play or as a direct APK.</p>
+          </details>
+          <details>
+            <summary>Google Play or the APK?</summary>
+            <p>Google Play is the easiest option and keeps the app updated for you. The APK is for people who prefer to install directly. Compare its SHA-256 checksum with the one on this page before you install.</p>
+          </details>
+          <details>
+            <summary>How do I delete my data?</summary>
+            <p>You can delete all of it from inside the app at any time, or email spendsmartapp.help@gmail.com. After deletion, data is removed from active storage within 30 days.</p>
+          </details>
+          <details>
+            <summary>What do crash reports include?</summary>
+            <p>Crash reports and performance metrics are collected through Firebase Crashlytics to help fix bugs. SpendSmart doesn't collect location data, contacts or browsing history.</p>
+          </details>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="foot">
@@ -300,6 +429,7 @@
         <p>Smart expense tracking for everyone.</p>
       </div>
       <nav class="foot__links" aria-label="Footer">
+        <a href="#faq">FAQ</a>
         <a href="https://github.com/mikusan-dot/Spendsmart_Website" rel="noopener">GitHub</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="mailto:spendsmartapp.help@gmail.com">Contact</a>
