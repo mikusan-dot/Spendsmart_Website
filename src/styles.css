@@ -261,6 +261,14 @@ img {
     margin-right: auto;
 }
 
+.apk-note {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    word-break: break-all;
+    font-family: 'SF Mono', Monaco, monospace;
+}
+
 /* Security */
 .security {
     padding: 80px 0;
